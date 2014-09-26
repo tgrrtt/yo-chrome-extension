@@ -1,4 +1,3 @@
-
 $(function(){
   $('#yo-button').on('click', function(){
     var username = $('#username').val();
