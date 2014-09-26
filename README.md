@@ -20,3 +20,6 @@ cd yo-chrome-extension
 4. Point your Chrome browser to 'chrome://extensions' and check the box for 'Developer Mode'. Then, click on 'Load unpacked extension...', navigate to your 'app' folder and click 'Select'.
 
 5. Click on the purple box in the upper right hand of your browser and send a Yo! (recipient must follow your account in order to receive your YOs)
+
+![](http://i.imgur.com/drc9JNo.png)
+
