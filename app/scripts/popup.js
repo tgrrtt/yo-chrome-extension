@@ -1,6 +1,6 @@
 'use strict';
 
-//console.log('\'Allo \'Allo! Popup');
+alert('\'Allo \'Allo! Popup');
 $(function(){
   $('#yo-button').on('click', function(){
     var username = $('#username').val();
