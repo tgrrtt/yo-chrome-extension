@@ -1,21 +1,34 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.ttf") format('truetype');
+}
+
 body {
-  width: 200px;
-  height: 100px;
+  width: 290px;
+  height: 140px;
+  background-color: #713b87;
+  color: white;
 }
 
 h1 {
-  margin-left: 10px;
-  margin-bottom: 10px;
+  font-family: "Montserrat";
+  margin-left: 20px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  font-size: 42px;
 }
 
 #container {
-  padding: 10px;
+  padding: 20px;
 }
 
 #username {
-
+  width: 180px;
+  margin-right: 10px;
+  display: inline;
+  margin-bottom: 0px;
 }
 
 #yo-button {
-
+  display: inline;
 }
