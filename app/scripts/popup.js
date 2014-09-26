@@ -6,7 +6,10 @@ $(function(){
       api_token: '410958b8-b7da-3856-65d9-d5ee2d934559',
       username: username
     }, function(){
-      $('#username').val('type a yo username');
+      $('#username').val('');
+      $('#err-msg').hide();
+    }).fail(function(){
+      $('#err-msg').show();
     });
   });
 });

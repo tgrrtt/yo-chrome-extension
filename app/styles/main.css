@@ -26,10 +26,15 @@ h1 {
   width: 180px;
   margin-right: 10px;
   display: inline;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
   text-transform: uppercase;
 }
 
 #yo-button {
   display: inline;
+}
+
+#err-msg {
+  display: none;
+  color: red;
 }
