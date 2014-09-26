@@ -1,3 +1,21 @@
 body {
-    padding: 20px;
+  width: 200px;
+  height: 100px;
+}
+
+h1 {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+#container {
+  padding: 10px;
+}
+
+#username {
+
+}
+
+#yo-button {
+
 }
