@@ -27,6 +27,7 @@ h1 {
   margin-right: 10px;
   display: inline;
   margin-bottom: 0px;
+  text-transform: uppercase;
 }
 
 #yo-button {
