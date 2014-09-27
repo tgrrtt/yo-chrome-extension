@@ -1,16 +1,19 @@
 $(function(){
+  // set form url to window url
+  function inputUrl(tabUrl) {
+    $('#link').val(tabUrl);
+  }
+
   chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
-    handleForm(tabs[0].url);
+    inputUrl(tabs[0].url);
+    //chrome.extension.getBackgroundPage().console.log("yo");
   });
 
-  function handleForm(tablink) {
-    //alert(tablink);
-    $("#link").val(tablink)
-    var url = $('#link').val() || 'http://optional-link.com';
-
-    $('#yo-form').submit(function(event){
-      event.preventDefault();
-      var username = $('#username').val();
+  $('#yo-form').submit(function(event){
+    event.preventDefault();
+    var username = $('#username').val();
+    var url = $('#link').val();
+    if($("#send-url").is(':checked')) {
       $.post('http://api.justyo.co/yo/', {
         api_token: secretkey,
         link: url,
@@ -21,26 +24,18 @@ $(function(){
       }).fail(function(){
         $('#err-msg').show();
       });
-    });
-  }
-
-
-
-  // $("#link").val(tabUrl)
-  // var url = $('#link').val() || 'http://optional-link.com';
-
-  // $('#yo-form').submit(function(event){
-  //   event.preventDefault();
-  //   var username = $('#username').val();
-  //   $.post('http://api.justyo.co/yo/', {
-  //     api_token: secretkey,
-  //     link: url,
-  //     username: username
-  //   }, function(){
-  //     $('#username').val('');
-  //     $('#err-msg').hide();
-  //   }).fail(function(){
-  //     $('#err-msg').show();
-  //   });
-  // });
+      //chrome.extension.getBackgroundPage().console.log("sendurl checked");
+    } else {
+      //chrome.extension.getBackgroundPage().console.log("sendurl  not checked");
+      $.post('http://api.justyo.co/yo/', {
+        api_token: secretkey,
+        username: username
+      }, function(){
+        $('#username').val('');
+        $('#err-msg').hide();
+      }).fail(function(){
+        $('#err-msg').show();
+      });
+    }
+  });
 });
