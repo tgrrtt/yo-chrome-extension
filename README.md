@@ -2,7 +2,7 @@
 
 Yo extension for the Chrome browser.
 
-<img src="http://i.imgur.com/PHMsUsF.png" style="width: 400px;"/>
+![](http://i.imgur.com/hxaxxKQ.jpg)
 
 ## How to install
 
