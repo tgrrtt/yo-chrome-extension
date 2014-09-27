@@ -21,5 +21,8 @@
         },
         "default_title": "yo chrome",
         "default_popup": "popup.html"
-    }
+    },
+    "permissions": [
+        "tabs"
+    ]
 }
