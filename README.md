@@ -2,6 +2,8 @@
 
 Yo extension for the Chrome browser.
 
+<img src="http://i.imgur.com/PHMsUsF.png" style="width: 400px;"/>
+
 ## How to install
 
 1. Clone the repo to your local machine and navigate to the project directory.
