@@ -2,6 +2,11 @@
   font-family: "Montserrat";
   src: url("../fonts/Montserrat-Regular.ttf") format('truetype');
 }
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.ttf") format('truetype');
+  font-weight: bold;
+}
 
 body {
   width: 290px;
@@ -14,11 +19,11 @@ h1 {
   font-family: "Montserrat";
   margin-left: 20px;
   margin-top: 15px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   font-size: 42px;
 }
 
-#container {
+.container {
   padding: 20px;
 }
 
@@ -33,29 +38,41 @@ h1 {
 #yo-button {
   margin-top: 20px;
   display: inline;
-  height: 30px;
+  font-weight: bold;
+  height: 50px;
   width: 100%;
   border-radius: 0;
   background-color: #58b7ec;
-  font-size: 1.2em;
+  font-size: 2em;
   color: white;
   border: 0;
 }
 
-#err-msg {
-  display: none;
-  color: red;
+#yo-button:hover {
+  background-color: #5abeec;
 }
+
+.err-msg {
+  display: none;
+  text-align: center;
+  padding: 5px;
+  margin: 15px auto 0 auto;
+  background-color: #d1796a;
+  border: 1px solid #8b4347;
+}
+
 #send-url {
   display: block;
   width: 20px;
   float: left;
 }
+
 label {
   display: inline-block;
   margin-top: 12px;
   float: left;
 }
+
 #link {
   display: inline;
 }

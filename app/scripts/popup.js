@@ -23,9 +23,9 @@ $(function(){
     }
     $.post('http://api.justyo.co/yo/', opts, function(){
       $('#username').val('');
-      $('#err-msg').hide();
+      $('.err-msg').hide();
     }).fail(function(){
-      $('#err-msg').show();
+      $('.err-msg').show();
     });
   });
 });
