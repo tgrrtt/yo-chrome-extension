@@ -13,29 +13,19 @@ $(function(){
     event.preventDefault();
     var username = $('#username').val();
     var url = $('#link').val();
-    if($("#send-url").is(':checked')) {
-      $.post('http://api.justyo.co/yo/', {
-        api_token: secretkey,
-        link: url,
-        username: username
-      }, function(){
-        $('#username').val('');
-        $('#err-msg').hide();
-      }).fail(function(){
-        $('#err-msg').show();
-      });
-      //chrome.extension.getBackgroundPage().console.log("sendurl checked");
-    } else {
-      //chrome.extension.getBackgroundPage().console.log("sendurl  not checked");
-      $.post('http://api.justyo.co/yo/', {
-        api_token: secretkey,
-        username: username
-      }, function(){
-        $('#username').val('');
-        $('#err-msg').hide();
-      }).fail(function(){
-        $('#err-msg').show();
-      });
+    var opts = {
+      api_token: secretkey,
+      username: username
     }
+    // Add a link key to opts if send-link is checked.
+    if($("#send-url").is(':checked')) {
+      opts.link = $('#link').val();
+    }
+    $.post('http://api.justyo.co/yo/', opts, function(){
+      $('#username').val('');
+      $('#err-msg').hide();
+    }).fail(function(){
+      $('#err-msg').show();
+    });
   });
 });
