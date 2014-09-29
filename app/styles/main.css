@@ -10,34 +10,29 @@
 
 body {
   width: 290px;
-  height: 140px;
-  background-color: #713b87;
+  background-color: #9B59B6;
   color: white;
 }
 
 h1 {
+  text-align: center;
   font-family: "Montserrat";
-  margin-left: 20px;
-  margin-top: 15px;
-  margin-bottom: 0;
   font-size: 42px;
 }
 
 .container {
-  padding: 20px;
+  padding: 0 20px 20px 20px;
 }
 
 #username {
   width: 100%;
   margin-right: 10px;
-  display: inline;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
 
 #yo-button {
   margin-top: 20px;
-  display: inline;
   font-weight: bold;
   height: 50px;
   width: 100%;
