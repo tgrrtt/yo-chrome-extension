@@ -63,8 +63,11 @@ h1 {
 
 #send-url {
   display: block;
-  width: 20px;
   float: left;
+  height: 14px;
+  width: 14px;
+  margin-right: 8px;
+  margin-top: 15px;
 }
 
 label {
