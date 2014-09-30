@@ -74,3 +74,29 @@ label {
 #link {
   display: inline;
 }
+
+.buddy-list {
+  margin-top: 20px;
+}
+
+.buddy-list tbody {
+  display: block;
+  height: 250px;
+  overflow: auto;
+}
+
+.buddy-list a {
+  color: white;
+  height: 40px;
+  width: 250px;
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 5px;
+  font-size: 1.6em;
+  font-family: "Montserrat";
+}
+
+.buddy-list a:hover {
+  text-decoration: none;
+}
