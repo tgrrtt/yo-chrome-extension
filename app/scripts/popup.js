@@ -1,5 +1,6 @@
 $(function(){
   var yoColors = ['#86BE95', '#FE51D5', '#5E2ECC', '#00F6AD', '#AFB109', '#18A2E9', '#CB1136', '#67D3D6', '#3BCE58', '#5E76D0'];
+  var yoColorsLight = ['#8FCBA0', '#fe68e7', '#6839cc', '#3ff6c0', '#bdbf09', '#3cade9', '#cb395a', '#7ed3d6', '#55ce68', '#748ad0'];
 
   // on load get buddies from buddylist and display
   var buddyList = JSON.parse(localStorage.getItem('buddies'));
