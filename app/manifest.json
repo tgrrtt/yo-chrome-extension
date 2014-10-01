@@ -11,7 +11,8 @@
     "background": {
         "scripts": [
             "scripts/chromereload.js",
-            "scripts/background.js"
+            "scripts/background.js",
+            "scripts/messageHandler.js"
         ]
     },
     "browser_action": {
@@ -24,5 +25,10 @@
     },
     "permissions": [
         "tabs"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://cdn.firebase.com/js/client/1.0.24/firebase.js"]
+        }
     ]
 }
