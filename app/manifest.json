@@ -9,12 +9,11 @@
     },
     "default_locale": "en",
     "background": {
+        "persistent": true,
         "scripts": [
-            "scripts/chromereload.js",
-            "scripts/background.js",
+            "scripts/firebase.js",
             "scripts/messageHandler.js"
-        ],
-        "persistent": true
+        ]
     },
     "browser_action": {
         "default_icon": {
@@ -25,7 +24,10 @@
         "default_popup": "popup.html"
     },
     "permissions": [
-        "tabs"
+        "tabs",
+        "notifications",
+        "background"
     ],
+    "background_page": "background.html",
     "content_security_policy": "script-src 'self' https://*.firebaseio.com; object-src 'self'"
 }
