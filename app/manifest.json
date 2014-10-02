@@ -13,7 +13,8 @@
             "scripts/chromereload.js",
             "scripts/background.js",
             "scripts/messageHandler.js"
-        ]
+        ],
+        "persistent": true
     },
     "browser_action": {
         "default_icon": {
@@ -26,9 +27,5 @@
     "permissions": [
         "tabs"
     ],
-    "content_scripts": [
-        {
-            "matches": ["https://cdn.firebase.com/js/client/1.0.24/firebase.js"]
-        }
-    ]
+    "content_security_policy": "script-src 'self' https://*.firebaseio.com; object-src 'self'"
 }
