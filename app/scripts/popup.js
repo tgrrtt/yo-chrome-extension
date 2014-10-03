@@ -21,14 +21,22 @@ $(function(){
     //chrome.extension.getBackgroundPage().console.log("yo");
   });
   ///////////////////////////
-  $("#afk-mode").change( function(){
-     if( $(this).is(':checked') ) {
+  $('#afk-mode').change(function(){
+    $this = $(this);
+    var firebase = new Firebase('https://yo-chrome.firebaseio.com/' + MY_USERNAME);
+    if( $this.is(':checked') ) {
       //let firebase know MY_USERNAME is afk
       // let firbase kow my MY_PHONENUMBER
-      var firebase = new Firebase('https://yo-chrome.firebaseio.com/' + MY_USERNAME);
       firebase.set({ status: 'afk', phone: MY_PHONENUMBER });
+    } else {
+      // let firebase know MY_USERNAME is afk
+      // let firbase kow my MY_PHONENUMBER
+      firebase.child('status').remove();
+      firebase.child('phone').remove();
     }
+    
   });
+
   //////////////////////////
 
   $('#yo-form').submit(function(event){
