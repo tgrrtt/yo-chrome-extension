@@ -22,6 +22,24 @@ $(function(){
     inputUrl(tabs[0].url);
     //chrome.extension.getBackgroundPage().console.log("yo");
   });
+  ///////////////////////////
+  $('#afk-mode').change(function(){
+    $this = $(this);
+    var firebase = new Firebase('https://yo-chrome.firebaseio.com/' + MY_USERNAME);
+    if( $this.is(':checked') ) {
+      //let firebase know MY_USERNAME is afk
+      // let firbase kow my MY_PHONENUMBER
+      firebase.set({ status: 'afk', phone: MY_PHONENUMBER });
+    } else {
+      // let firebase know MY_USERNAME is afk
+      // let firbase kow my MY_PHONENUMBER
+      firebase.child('status').remove();
+      firebase.child('phone').remove();
+    }
+    
+  });
+
+  //////////////////////////
 
   $('#yo-form').submit(function(event){
     event.preventDefault();
@@ -66,4 +84,14 @@ $(function(){
     $('#username').val(buddyName);
   });
   
+  // $("#afk-mode").change(function(){
+  //   if($('#afk-mode').is(':checked')){
+  //     // $('#username').hide();
+  //     $('#phonenumber').show();
+  //   } else {
+  //     $('#phonenumber').hide();
+  //     // $('#username').show();      
+  //   }
+
+  // })
 });

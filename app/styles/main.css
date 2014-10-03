@@ -31,6 +31,15 @@ h1 {
   text-transform: uppercase;
 }
 
+#phonenumber {
+  width: 100%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  display: none;
+}
+
+
 #yo-button {
   margin-top: 20px;
   font-weight: bold;
@@ -57,6 +66,15 @@ h1 {
 }
 
 #send-url {
+  display: block;
+  float: left;
+  height: 14px;
+  width: 14px;
+  margin-right: 8px;
+  margin-top: 15px;
+}
+
+#afk-mode {
   display: block;
   float: left;
   height: 14px;
