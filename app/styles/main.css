@@ -65,6 +65,15 @@ h1 {
   margin-top: 15px;
 }
 
+#afk-mode {
+  display: block;
+  float: left;
+  height: 14px;
+  width: 14px;
+  margin-right: 8px;
+  margin-top: 15px;
+}
+
 label {
   display: inline-block;
   margin-top: 12px;
