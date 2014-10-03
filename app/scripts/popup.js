@@ -5,10 +5,12 @@ $(function(){
   // on load get buddies from buddylist and display
   var buddyList = JSON.parse(localStorage.getItem('buddies'));
   var shuffledColors = _.shuffle(yoColors);
-  for (var i = 0; i < buddyList.length; i++){
-    var $buddy = $('<tr>').append($('<td>').append($('<a>').attr('href', '#').text(buddyList[i])));
-    $buddy.css('background-color', shuffledColors[i % buddyList.length]);
-    $('.buddy-list').append($buddy);
+  if (buddyList.length){
+    for (var i = 0; i < buddyList.length; i++){
+      var $buddy = $('<tr>').append($('<td>').append($('<a>').attr('href', '#').text(buddyList[i])));
+      $buddy.css('background-color', shuffledColors[i % buddyList.length]);
+      $('.buddy-list').append($buddy);
+    }
   }
 
   // set form url to window url
