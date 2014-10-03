@@ -82,14 +82,14 @@ $(function(){
     $('#username').val(buddyName);
   });
   
-  $("#afk-mode").change(function(){
-    if($('#afk-mode').is(':checked')){
-      // $('#username').hide();
-      $('#phonenumber').show();
-    } else {
-      $('#phonenumber').hide();
-      // $('#username').show();      
-    }
+  // $("#afk-mode").change(function(){
+  //   if($('#afk-mode').is(':checked')){
+  //     // $('#username').hide();
+  //     $('#phonenumber').show();
+  //   } else {
+  //     $('#phonenumber').hide();
+  //     // $('#username').show();      
+  //   }
 
-  })
+  // })
 });
