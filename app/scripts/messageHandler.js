@@ -9,6 +9,9 @@ firebase.child(MY_USERNAME).on('child_added', function(snapshot){
     message: "New Yo from " + data['yo from'],
     iconUrl: "../images/icon-128.png"
   };
+  if (data['link']){
+    options.buttons = [{ title: "With a link!" }];
+  }
   chrome.notifications.create(yoId, options, function(){
     console.log('sent notif');
   });
