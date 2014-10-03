@@ -10,10 +10,7 @@
     "default_locale": "en",
     "background": {
         "persistent": true,
-        "scripts": [
-            "scripts/firebase.js",
-            "scripts/messageHandler.js"
-        ]
+        "page": "background.html"
     },
     "browser_action": {
         "default_icon": {
@@ -28,6 +25,5 @@
         "notifications",
         "background"
     ],
-    "background_page": "background.html",
     "content_security_policy": "script-src 'self' https://*.firebaseio.com; object-src 'self'"
 }
