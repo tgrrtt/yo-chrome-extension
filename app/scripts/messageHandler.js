@@ -1,6 +1,6 @@
 var firebase = new Firebase('https://yo-chrome.firebaseio.com/');
 
-firebase.child(MY_USERNAME).on('child_added', function(snapshot){
+firebase.child(MY_USERNAME).child('yos').on('child_added', function(snapshot){
   var data = snapshot.val();
   var yoId = '' + new Date() + data['yo from'];
   var options = {
