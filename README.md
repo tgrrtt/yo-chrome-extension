@@ -2,7 +2,13 @@
 
 Yo extension for the Chrome browser.
 
-![](http://i.imgur.com/hxaxxKQ.jpg)
+![](http://i.imgur.com/gVcEwW6.jpg)
+
+## Feature List
+
+- Yo a link!
+- Recieve Yo's! (Chrome Notifications)
+- AFK Mode! (Yo-2-Text)
 
 ## How to install
 
