@@ -52,6 +52,18 @@ h1 {
   border: 0;
 }
 
+#options-button {
+  margin-top: 20px;
+  font-weight: bold;
+  height: 30px;
+  width: 100%;
+  border-radius: 0;
+  background-color: #58b7ec;
+  font-size: 1em;
+  color: white;
+  border: 0;
+}
+
 #yo-button:hover {
   background-color: #5abeec;
 }
