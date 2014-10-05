@@ -12,7 +12,6 @@ $(function(){
       $('.buddy-list').append($buddy);
     }
   }
-
   // set form url to window url
   function inputUrl(tabUrl) {
     $('#link').val(tabUrl);

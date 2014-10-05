@@ -23,7 +23,8 @@
     "permissions": [
         "tabs",
         "notifications",
-        "background"
+        "background",
+        "storage"
     ],
     "content_security_policy": "script-src 'self' https://*.firebaseio.com; object-src 'self'"
 }

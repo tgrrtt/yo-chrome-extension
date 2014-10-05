@@ -1,0 +1,28 @@
+body {
+  width:100%;
+  background-color:#9B59B6;
+  color:#fff
+}
+
+.row-centered {
+  text-align:center
+}
+
+.col-centered {
+  display:inline-block;
+  float:none;
+  text-align:left;
+  margin-right:-4px
+}
+
+#opt-button {
+  margin-top: 20px;
+  font-weight: bold;
+  height: 50px;
+  width: 100%;
+  border-radius: 0;
+  background-color: #58b7ec;
+  font-size: 2em;
+  color: white;
+  border: 0;
+}
