@@ -13,8 +13,7 @@ $(document).ready(function() {
       $('#opt-button').text('(Saved)');
     });
   });
-  chrome.storage.local.get(['apiKey', 'userName', 'phoneNumber'], function(
-    data) {
+  chrome.storage.local.get(['apiKey', 'userName', 'phoneNumber'], function(data) {
     if (data.apiKey > '' || data.userName > '' || data.phoneNumber > '') {
       $('#YOPIKEY').val(data.apiKey);
       $('#YOSERNAME').val(data.userName);

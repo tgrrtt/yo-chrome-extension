@@ -24,18 +24,17 @@ $(function(){
   ///////////////////////////
   $('#afk-mode').change(function(){
     $this = $(this);
-    var firebase = new Firebase('https://yo-chrome.firebaseio.com/' + MY_USERNAME);
-    if( $this.is(':checked') ) {
-      //let firebase know MY_USERNAME is afk
-      // let firbase kow my MY_PHONENUMBER
-      firebase.set({ status: 'afk', phone: MY_PHONENUMBER });
-    } else {
-      // let firebase know MY_USERNAME is afk
-      // let firbase kow my MY_PHONENUMBER
-      firebase.child('status').remove();
-      firebase.child('phone').remove();
-    }
-    
+    chrome.storage.local.get(['userName', 'phoneNumber'], function(data) {
+      var firebase = new Firebase('https://yo-chrome.firebaseio.com/' + data.userName);
+      if( $this.is(':checked') ) {
+
+        firebase.set({ status: 'afk', phone: data.phoneNumber});
+      } else {
+        
+        firebase.child('status').remove();
+        firebase.child('phone').remove();
+      }
+    });
   });
 
   //////////////////////////
@@ -44,19 +43,23 @@ $(function(){
     event.preventDefault();
     var username = $('#username').val();
     var url = $('#link').val();
-    var opts = {
-      api_token: secretkey,
-      username: username
-    }
+    var opts = {};
     // Add a link key to opts if send-link is checked.
-    if($("#send-url").is(':checked')) {
+    if($('#send-url').is(':checked')) {
       opts.link = $('#link').val();
     }
-    $.post('http://api.justyo.co/yo/', opts, function(){
-      $('#username').val('');
-      $('.err-msg').hide();
-    }).fail(function(){
-      $('.err-msg').show();
+
+    chrome.storage.local.get(['apiKey'], function(data) {
+      opts = {
+            api_token: data.apiKey,
+            username: username
+          };
+      $.post('http://api.justyo.co/yo/', opts, function(){
+        $('#username').val('');
+        $('.err-msg').hide();
+      }).fail(function(){
+        $('.err-msg').show();
+      });
     });
     
     var buddyList = JSON.parse(localStorage.getItem('buddies'));
